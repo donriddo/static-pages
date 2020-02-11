@@ -11,12 +11,60 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover 
+{
+   color:#00A0C6; 
+   text-decoration:none; 
+   cursor:pointer;  
+}
 body {
   padding: 10px;
+  margin: 0;
 }
 
 .container {
-  width: 1024px;
+  position: relative;
+  max-width: 100%;
+}
+
+.navbar {
+  top: 0;
+  height: 40px;
+  background-color: rgb(240, 9, 9);
+  color: whitesmoke;
+  position: fixed;
+  width: calc(100% - 20px); /* remove padding-right: 20px; + padding-left: 20px; */
+  display: flex;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  flex: 1 1 0;
+  margin: 10px;
+}
+
+.navbar-links {
+  flex: 3 1 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-links > a {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.main {
+  position: relative;
+  top: 40px;
+}
+
+.love {
   border: 5px solid rgb(111,41,97);
   border-radius: .5em;
   padding: 10px;
@@ -31,7 +79,7 @@ body {
     ". . d"
 }
 
-.container > div {
+.love > div {
   padding: 10px;
   background-color: rgba(111,41,97,.3);
   border: 2px solid rgba(111,41,97,.5);
